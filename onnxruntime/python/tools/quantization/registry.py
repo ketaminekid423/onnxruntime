@@ -17,6 +17,7 @@ from .operators.direct_q8 import Direct8BitOp, QDQDirect8BitOp
 from .operators.resize import QResize, QDQResize
 from .operators.pooling import QLinearPool
 from .operators.concat import QLinearConcat, QDQConcat
+from .operators.gemm import QLinearGemm, QDQGemm
 
 CommonOpsRegistry = {
     "Gather": GatherQuant,
@@ -34,6 +35,7 @@ IntegerOpsRegistry.update(CommonOpsRegistry)
 
 QLinearOpsRegistry = {
     "Conv": QLinearConv,
+    "Gemm": QLinearGemm,
     "MatMul": QLinearMatMul,
     "Add": QLinearBinaryOp,
     "Mul": QLinearBinaryOp,
@@ -56,6 +58,7 @@ QLinearOpsRegistry.update(CommonOpsRegistry)
 
 QDQRegistry = {
     "Conv": QDQConv,
+    "Gemm": QDQGemm,
     "Clip": QDQRemovableActivation,
     "Relu": QDQRemovableActivation,
     "Reshape": QDQDirect8BitOp,
