@@ -35,7 +35,7 @@
   ], 
   "devDependencies": {
     "fs-extra": "^9.1.0", 
-    "cmake-js": "^6.2.1", 
+    "cmake-js": "^7.2.1", 
     "jsonc": "^2.0.0", 
     "onnx-proto": "^4.0.4", 
     "minimist": "^1.2.5", 
